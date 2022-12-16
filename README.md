@@ -11,17 +11,17 @@ Basic and useful partials and functions for Hugo theme developers.
 The `base/title` partial generates a universal title for the page, that include separator, paginator (i18n) and sections' titles.
 
 | Parameter | Type | Default | Description
-|---|---|---|---
+|---|:-:|:-:|---
 | `title_separator` | String | `-` | Title separator.
 
 | Page | Kind | Title
-|---|---|---
+|---|:-:|---
 | `/` | Home | My Site.
 | `/page/2` | List | My Site - Page 2 of N.
 | `/blog` | Section | Blog - My Site.
-| `/blog/hello` | Single Page | Hello world - Blog - My Site.
+| `/blog/hello` | Page | Hello world - Blog - My Site.
 | `/blog/foo` | Section | Foo - My Site.
-| `/blog/foo/bar` | Single Page | Bar - Foo - My Site.
+| `/blog/foo/bar` | Page | Bar - Foo - My Site.
 
 You'll need to wrap the `base/title` partial as the fallback via `block` syntax, and initialize the paginator within the `title` block.
 
