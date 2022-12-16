@@ -17,4 +17,44 @@
     {{ end }}
   </ul>
   {{ template "_internal/pagination.html" . }}
+
+
+  <style>
+    .th,
+    td {
+      border: 1px solid gray;
+    }
+  </style>
+
+  <h2>Partial if exists</h2>
+  <table>
+    <tr>
+      <th>Partial</th>
+      <th>Output</th>
+    </tr>
+    <tr>
+      <td>foo</td>
+      <td>
+        {{ partial "base/partial-if-exists" (dict "Name" "foo" "Context" .) }}
+      </td>
+    </tr>
+    <tr>
+      <td>foo.html</td>
+      <td>
+        {{ partial "base/partial-if-exists" (dict "Name" "foo.html" "Context" .) }}
+      </td>
+    </tr>
+    <tr>
+      <td>foo.json</td>
+      <td>
+        {{ partial "base/partial-if-exists" (dict "Name" "foo.json" "Context" .) }}
+      </td>
+    </tr>
+    <tr>
+      <td>invalid.html</td>
+      <td>
+        {{ partial "base/partial-if-exists" (dict "Name" "invalid.html" "Context" .) }}
+      </td>
+    </tr>
+  </table>
 {{ end }}

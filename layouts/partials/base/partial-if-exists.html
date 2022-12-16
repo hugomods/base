@@ -1,0 +1,4 @@
+{{- $partial := printf "partials/%s" .Name }}
+{{- if templates.Exists $partial }}
+  {{- partial $partial .Context }}
+{{- end }}

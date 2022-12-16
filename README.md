@@ -59,3 +59,20 @@ You'll need to wrap the `base/title` partial as the fallback via `block` syntax,
   {{ template "_internal/pagination.html" . }}
 {{ end }}
 ```
+
+### Partial If Exists
+
+Include the target partial if exists.
+
+| Parameter | Type | Description
+|---|:-:|---
+| `Name` | String | The partial name, extension is required, such as `foo.html`.
+| `Context` | Any | The context passed to target partial.
+
+```go
+{{ partial "base/partial-if-exists" (dict "Name" "foo.html" "Context" .) }}
+
+{{ partial "base/partial-if-exists" (dict "Name" "foo.json" "Context" .) }}
+
+{{ partial "base/partial-if-exists" (dict "Name" "invalid.html" "Context" .) }}
+```
