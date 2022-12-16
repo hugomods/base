@@ -1,4 +1,7 @@
 {{- $titles := slice .Title }}
+{{- if and .IsHome (eq .Title "") }}
+  {{- $titles = slice .Site.Title }}
+{{- end }}
 {{/* Append paginator title. The partial must be included after paginating. */}}
 {{- with .Paginator }}
   {{- if gt .PageNumber 1 }}
