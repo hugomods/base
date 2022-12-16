@@ -1,0 +1,20 @@
+{{ define "title" }}
+  {{/* We MUST initialize the paginator first. */}}
+  {{ $mainSections := slice "blog" }}
+  {{ $pages := where .Site.RegularPages "Type" "in" $mainSections }}
+  {{ $paginator := .Paginate $pages 1 }}
+  {{/* Then include the title partial. */}}
+  {{ partial "base/title" . }}
+{{ end }}
+
+{{ define "main" }}
+  <ul style="list-style: none;">
+    {{/* Use the initialized paginator above. */}}
+    {{ range .Paginator.Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+  {{ template "_internal/pagination.html" . }}
+{{ end }}

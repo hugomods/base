@@ -1,0 +1,2 @@
+[paginator_title]
+other = "Page {{ .PageNumber }} of {{ .TotalPages }}"
