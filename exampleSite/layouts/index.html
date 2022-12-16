@@ -57,4 +57,34 @@
       </td>
     </tr>
   </table>
+
+  <h2>Has TOC</h2>
+  <table>
+    <tr>
+      <th>TableOfContent</th>
+      <th>Expected</th>
+      <th>Actual</th>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>false</td>
+      <td>
+        {{ partial "base/functions/has-toc" (dict "TableOfContents" "") }}
+      </td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>false</td>
+      <td>
+        {{ partial "base/functions/has-toc" (dict "TableOfContents" `<nav id="TableOfContents"></nav>`) }}
+      </td>
+    </tr>
+    <tr>
+      <td>Introduction</td>
+      <td>true</td>
+      <td>
+        {{ partial "base/functions/has-toc" (dict "TableOfContents" `<nav id="TableOfContents"><ul><li>Introduction</li></ul></nav>`) }}
+      </td>
+    </tr>
+  </table>
 {{ end }}
