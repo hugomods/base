@@ -2,3 +2,6 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'github.com/razonyang/hugo-mod-base'
+
+[params]
+# title_sections = false
