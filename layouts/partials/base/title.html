@@ -9,7 +9,9 @@
   {{- end }}
 {{- end }}
 {{/* Append the sections titles. */}}
-{{- $titles = $titles | append (partial "base/functions/sections-titles" .) }}
+{{- if .Site.Params.title_sections }}
+  {{- $titles = $titles | append (partial "base/functions/sections-titles" .) }}
+{{- end }}
 {{/* Append the site title at the end. */}}
 {{- if not .IsHome }}
   {{- $titles = $titles | append .Site.Title }}

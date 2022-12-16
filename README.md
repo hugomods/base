@@ -13,6 +13,7 @@ The `base/title` partial generates a universal title for the page, that include 
 | Parameter | Type | Default | Description
 |---|:-:|:-:|---
 | `title_separator` | String | `-` | Title separator.
+| `title_sections` | Boolean | `true` | Show/Hide the sections titles.
 
 | Page | Kind | Title
 |---|:-:|---
