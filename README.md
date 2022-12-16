@@ -23,7 +23,9 @@ The `base/title` partial generates a universal title for the page, that include 
 | `/blog/foo` | Section | Foo - My Site.
 | `/blog/foo/bar` | Page | Bar - Foo - My Site.
 
-You'll need to wrap the `base/title` partial as the fallback via `block` syntax, and initialize the paginator within the `title` block.
+You'll need to wrap the `base/title` partial as the fallback via `block` syntax, and initialize the paginator within the `title` block if necessary.
+
+> Since the `.Paginator` was cached once initalized, so we MUST initialized it before calling the `base/title` partial.
 
 ```go
 {{/* baseof.html */}}
