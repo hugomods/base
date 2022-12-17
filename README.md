@@ -6,7 +6,7 @@ Basic and useful partials and functions for Hugo theme developers.
 
 ### Has TOC Function
 
-The `base/functions/has-toc` accepts a Page and returns a boolean value to indicate whether the page has non-empty table of contents.
+The `base/functions/has-toc` accepts a Page and returns a boolean value to indicate whether the page's table of contents is not empty.
 
 ```go
 {{ if partial "base/functions/has-toc" . }}
