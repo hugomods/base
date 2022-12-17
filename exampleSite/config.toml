@@ -5,3 +5,24 @@ theme = 'github.com/razonyang/hugo-mod-base'
 
 [params]
 # title_sections = false
+
+[[menus.tests]]
+name = "Home"
+url = "/"
+weight = 1
+[menus.tests.params]
+is_external = false
+
+[[menus.tests]]
+name = "Blog"
+url = "/blog"
+weight = 2
+[menus.tests.params]
+is_external = false
+
+[[menus.tests]]
+name = "GitHub"
+weight = 3
+url = "https://github.com"
+[menus.tests.params]
+is_external = true

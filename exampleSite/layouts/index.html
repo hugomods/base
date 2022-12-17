@@ -87,4 +87,52 @@
       </td>
     </tr>
   </table>
+
+  <h2>Is URL External</h2>
+  <table>
+    <tr>
+      <th>URL</th>
+      <th>Expected</th>
+      <th>Actual</th>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>false</td>
+      <td>
+        {{ partial "base/functions/is-url-external" "/" }}
+      </td>
+    </tr>
+    <tr>
+      <td>/blog</td>
+      <td>false</td>
+      <td>
+        {{ partial "base/functions/is-url-external" "/blog" }}
+      </td>
+    </tr>
+    <tr>
+      <td>https://github.com/</td>
+      <td>true</td>
+      <td>
+        {{ partial "base/functions/is-url-external" "https://github.com/" }}
+      </td>
+    </tr>
+  </table>
+
+  <h2>Is Menu External</h2>
+  <table>
+    <tr>
+      <th>URL</th>
+      <th>Expected</th>
+      <th>Actual</th>
+    </tr>
+    {{- range .Site.Menus.tests }}
+      <tr>
+        <td>{{ .URL }}</td>
+        <td>{{ .Params.is_external }}</td>
+        <td>
+          {{ partial "base/functions/is-menu-external" . }}
+        </td>
+      </tr>
+    {{- end }}
+  </table>
 {{ end }}
