@@ -1,0 +1,2 @@
+{{/* Returns a boolean value to indicate whether the given menu entry is external. */}}
+{{- return not (hasPrefix (absURL .URL) (absURL site.BaseURL)) -}}

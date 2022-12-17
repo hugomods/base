@@ -14,6 +14,26 @@ The `base/functions/has-toc` accepts a Page and returns a boolean value to indic
 {{ end }}
 ```
 
+### Is URL External
+
+Indicate whether the URL is external.
+
+```go
+{{ if partial "base/functions/is-url-external" "https://example.com" }}
+OPEN IN NEW TAB
+{{ end }}
+```
+
+### Is Menu External
+
+Indicate whether the menu is external.
+
+```go
+{{ if partial "base/functions/is-menu-external" $menu }}
+OPEN IN NEW TAB
+{{ end }}
+```
+
 ## Partials
 
 ### Title Partials
