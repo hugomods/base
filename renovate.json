@@ -4,7 +4,8 @@
     "config:base"
   ],
   "ignorePaths": [
-    "exampleSite/**"
+    "exampleSite/**",
+    "site/**"
    ],
   "packageRules": [
     {
