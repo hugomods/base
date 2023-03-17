@@ -9,7 +9,7 @@ Basic and useful partials and functions for Hugo theme developers.
 
 ## Functions
 
-### Has TOC Function
+### Has ToC Function
 
 The `base/functions/has-toc` accepts a Page and returns a boolean value to indicate whether the page's table of contents is not empty.
 
