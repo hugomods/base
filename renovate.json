@@ -3,6 +3,9 @@
   "extends": [
     "config:base"
   ],
+  "ignorePaths": [
+    "exampleSite/**"
+   ],
   "packageRules": [
     {
       "matchManagers": ["gomod"],
