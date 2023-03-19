@@ -1,0 +1,138 @@
+{{ define "title" }}
+  {{/* We MUST initialize the paginator first. */}}
+  {{ $mainSections := slice "blog" }}
+  {{ $pages := where .Site.RegularPages "Type" "in" $mainSections }}
+  {{ $paginator := .Paginate $pages 1 }}
+  {{/* Then include the title partial. */}}
+  {{ partial "base/title" . }}
+{{ end }}
+
+{{ define "main" }}
+  <ul style="list-style: none;">
+    {{/* Use the initialized paginator above. */}}
+    {{ range .Paginator.Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+  {{ template "_internal/pagination.html" . }}
+
+
+  <style>
+    .th,
+    td {
+      border: 1px solid gray;
+    }
+  </style>
+
+  <h2>Partial if exists</h2>
+  <table>
+    <tr>
+      <th>Partial</th>
+      <th>Output</th>
+    </tr>
+    <tr>
+      <td>foo</td>
+      <td>
+        {{ partial "base/partial-if-exists" (dict "Name" "foo" "Context" .) }}
+      </td>
+    </tr>
+    <tr>
+      <td>foo.html</td>
+      <td>
+        {{ partial "base/partial-if-exists" (dict "Name" "foo.html" "Context" .) }}
+      </td>
+    </tr>
+    <tr>
+      <td>foo.json</td>
+      <td>
+        {{ partial "base/partial-if-exists" (dict "Name" "foo.json" "Context" .) }}
+      </td>
+    </tr>
+    <tr>
+      <td>invalid.html</td>
+      <td>
+        {{ partial "base/partial-if-exists" (dict "Name" "invalid.html" "Context" .) }}
+      </td>
+    </tr>
+  </table>
+
+  <h2>Has TOC</h2>
+  <table>
+    <tr>
+      <th>TableOfContent</th>
+      <th>Expected</th>
+      <th>Actual</th>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>false</td>
+      <td>
+        {{ partial "base/functions/has-toc" (dict "TableOfContents" "") }}
+      </td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>false</td>
+      <td>
+        {{ partial "base/functions/has-toc" (dict "TableOfContents" `<nav id="TableOfContents"></nav>`) }}
+      </td>
+    </tr>
+    <tr>
+      <td>Introduction</td>
+      <td>true</td>
+      <td>
+        {{ partial "base/functions/has-toc" (dict "TableOfContents" `<nav id="TableOfContents"><ul><li>Introduction</li></ul></nav>`) }}
+      </td>
+    </tr>
+  </table>
+
+  <h2>Is URL External</h2>
+  <table>
+    <tr>
+      <th>URL</th>
+      <th>Expected</th>
+      <th>Actual</th>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>false</td>
+      <td>
+        {{ partial "base/functions/is-url-external" "/" }}
+      </td>
+    </tr>
+    <tr>
+      <td>/blog</td>
+      <td>false</td>
+      <td>
+        {{ partial "base/functions/is-url-external" "/blog" }}
+      </td>
+    </tr>
+    <tr>
+      <td>https://github.com/</td>
+      <td>true</td>
+      <td>
+        {{ partial "base/functions/is-url-external" "https://github.com/" }}
+      </td>
+    </tr>
+  </table>
+
+  <h2>Is Menu External</h2>
+  <table>
+    <tr>
+      <th>URL</th>
+      <th>Expected</th>
+      <th>Actual</th>
+    </tr>
+    {{- range .Site.Menus.tests }}
+      <tr>
+        <td>{{ .URL }}</td>
+        <td>{{ .Params.is_external }}</td>
+        <td>
+          {{ partial "base/functions/is-menu-external" . }}
+        </td>
+      </tr>
+    {{- end }}
+  </table>
+{{ end }}

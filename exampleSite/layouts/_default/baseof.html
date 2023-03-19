@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>
+      {{/* Use the "base/title" partial as fallback. */}}
+      {{ block "title" . }}{{ partial "base/title" . }}{{ end }}
+    </title>
+    <style>
+      .pagination {
+        display: flex;
+        list-style: none;
+      }
+
+      .page-item {
+        margin: 0 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    {{ block "main" . }}{{ end }}
+  </body>
+</html>

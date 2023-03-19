@@ -1,0 +1,20 @@
+{{- $titles := slice .Title }}
+{{- if and .IsHome (eq .Title "") }}
+  {{- $titles = slice .Site.Title }}
+{{- end }}
+{{/* Append paginator title. The partial must be included after paginating. */}}
+{{- with .Paginator }}
+  {{- if gt .PageNumber 1 }}
+    {{- $titles = $titles | append (i18n "paginator_title" .) }}
+  {{- end }}
+{{- end }}
+{{/* Append the sections titles. */}}
+{{- if .Site.Params.title_sections }}
+  {{- $titles = $titles | append (partial "base/functions/sections-titles" .) }}
+{{- end }}
+{{/* Append the site title at the end. */}}
+{{- if not .IsHome }}
+  {{- $titles = $titles | append .Site.Title }}
+{{- end }}
+{{- $separator := printf " %s " .Site.Params.title_separator }}
+{{- delimit $titles $separator -}}

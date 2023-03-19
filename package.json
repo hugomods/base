@@ -1,0 +1,17 @@
+{
+  "name": "Hugo Base Module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugomods/base.git"
+  },
+  "author": "razonyang <razonyang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugomods/base/issues"
+  },
+  "homepage": "https://github.com/hugomods/base#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}

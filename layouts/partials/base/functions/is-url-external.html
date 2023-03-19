@@ -1,0 +1,2 @@
+{{/* Returns a boolean value to indicate whether the given URL is external. */}}
+{{- return not (hasPrefix (absURL .) (absURL site.BaseURL)) -}}
