@@ -61,7 +61,7 @@ The `base/title` partial generates a universal title for the page, that include 
 
 You'll need to wrap the `base/title` partial as the fallback via `block` syntax, and initialize the paginator within the `title` block if necessary.
 
-> Since the `.Paginator` was cached once initalized, so we MUST initialized it before calling the `base/title` partial.
+> Since the `.Paginator` was cached once initialized, so we MUST initialized it before calling the `base/title` partial.
 
 ```go
 {{/* baseof.html */}}
