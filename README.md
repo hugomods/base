@@ -49,6 +49,8 @@ The `base/title` partial generates a universal title for the page, that include 
 |---|:-:|:-:|---
 | `title_separator` | String | `-` | Title separator.
 | `title_sections` | Boolean | `true` | Show/Hide the sections titles.
+| `title_sections_depth` | Number | `0` | The depth of sections, default to all.
+| `title_sections_depth_dir` | String | `end` | The direction for counting the sections, when `start`, the depth is counting from the root sections.
 
 | Page | Kind | Title
 |---|:-:|---
