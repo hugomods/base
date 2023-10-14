@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/hugomods/base#readme",
   "devDependencies": {
-    "prettier": "^2.7.1",
+    "prettier": "^3.0.0",
     "prettier-plugin-go-template": "^0.0.15"
   }
 }
