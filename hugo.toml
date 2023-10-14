@@ -5,3 +5,4 @@ min = "0.110.0"
 title_separator = "-"
 title_sections = true
 title_sections_depth = 0
+title_sections_depth_dir = "end" # When set as start, the depth is counting from the root sections.

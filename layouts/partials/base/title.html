@@ -11,8 +11,14 @@
 {{/* Append the sections titles. */}}
 {{- if .Site.Params.title_sections }}
   {{- $sections := partial "base/functions/sections-titles" . }}
-  {{- with default 0 site.Params.title_sections_depth }}
-    {{- $sections = first . $sections }}
+  {{- $depth := default 0 site.Params.title_sections_depth }}
+  {{- $dir := default "end" site.Params.title_sections_depth_dir }}
+  {{- with $depth }}
+    {{- if eq $dir "start" }}
+      {{- $sections = last . $sections }}
+    {{- else }}
+      {{- $sections = first . $sections }}
+    {{- end }}
   {{- end }}
   {{- $titles = $titles | append $sections }}
 {{- end }}
