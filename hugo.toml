@@ -4,3 +4,4 @@ min = "0.110.0"
 [params]
 title_separator = "-"
 title_sections = true
+title_sections_depth = 0
