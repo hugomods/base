@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/hugomods/base/compare/v0.2.0...v0.3.0) (2023-10-17)
+
+
+### Features ✨
+
+* **i18n:** add Korean translations ([327768b](https://github.com/hugomods/base/commit/327768b3d0cc20d11599c3b219e06bb37a93229f))
+
 ## [0.2.0](https://github.com/hugomods/base/compare/v0.1.0...v0.2.0) (2023-10-14)
 
 
