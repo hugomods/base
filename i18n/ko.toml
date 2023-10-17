@@ -1,0 +1,2 @@
+[paginator_title]
+other = "{{ .PageNumber }}/{{ .TotalPages }} 페이지"
