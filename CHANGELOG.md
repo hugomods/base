@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/hugomods/base/compare/v0.3.0...v0.4.0) (2023-10-22)
+
+
+### Features ✨
+
+* **i18n:** create ms.toml ([#31](https://github.com/hugomods/base/issues/31)) ([72940de](https://github.com/hugomods/base/commit/72940dea00148aa88f873669b13614ea6059f242))
+
 ## [0.3.0](https://github.com/hugomods/base/compare/v0.2.0...v0.3.0) (2023-10-17)
 
 
