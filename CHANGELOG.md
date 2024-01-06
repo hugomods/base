@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/hugomods/base/compare/v0.4.0...v0.4.1) (2024-01-06)
+
+
+### Bug Fixes 🐞
+
+* safe check to get rid of runtime issue ([#34](https://github.com/hugomods/base/issues/34)) ([86ff37a](https://github.com/hugomods/base/commit/86ff37abab7b3a82b6cda9a10add7bc580bced72))
+
 ## [0.4.0](https://github.com/hugomods/base/compare/v0.3.0...v0.4.0) (2023-10-22)
 
 
