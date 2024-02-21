@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.2](https://github.com/hugomods/base/compare/v0.4.1...v0.4.2) (2024-02-21)
+
+
+### Bug Fixes 🐞
+
+* do not paginate on page ([#36](https://github.com/hugomods/base/issues/36)) ([2432a6d](https://github.com/hugomods/base/commit/2432a6dfd3cb2e5dc4933aaf25f98a0b65772c9e))
+* section titles parsing ([2432a6d](https://github.com/hugomods/base/commit/2432a6dfd3cb2e5dc4933aaf25f98a0b65772c9e))
+
 ## [0.4.1](https://github.com/hugomods/base/compare/v0.4.0...v0.4.1) (2024-01-06)
 
 
