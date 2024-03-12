@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/hugomods/base/compare/v0.4.2...v0.5.0) (2024-03-12)
+
+
+### Features ✨
+
+* add the data function to fetch data from page data or site data ([#40](https://github.com/hugomods/base/issues/40)) ([96a6fc9](https://github.com/hugomods/base/commit/96a6fc9141a9c32a2aae3653b0238919545697d7))
+
 ## [0.4.2](https://github.com/hugomods/base/compare/v0.4.1...v0.4.2) (2024-02-21)
 
 
