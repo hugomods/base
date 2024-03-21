@@ -1,0 +1,10 @@
+{{- $rewrite := .Params.rewrite }}
+{{- if not (isset $rewrite "path") }}
+  {{- errorf "[rewrite] no rewrite path specified: %s." .Path }}
+{{- else }}
+  {{- with .GetPage $rewrite.path }}
+    {{ .Render (default "single" $rewrite.template) }}
+  {{- else }}
+    {{- errorf "[rewrite] page not found: %s." $rewrite.path }}
+  {{- end }}
+{{- end }}
