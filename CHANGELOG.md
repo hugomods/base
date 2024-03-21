@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/hugomods/base/compare/v0.5.0...v0.6.0) (2024-03-21)
+
+
+### Features ✨
+
+* add the rewrite layout ([#43](https://github.com/hugomods/base/issues/43)) ([9b0b4cb](https://github.com/hugomods/base/commit/9b0b4cb4c9c6e669b42e0f9d2c65d72913fb2fa3))
+
 ## [0.5.0](https://github.com/hugomods/base/compare/v0.4.2...v0.5.0) (2024-03-12)
 
 
