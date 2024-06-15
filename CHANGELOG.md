@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/hugomods/base/compare/v0.7.0...v0.7.1) (2024-06-15)
+
+
+### Bug Fixes 🐞
+
+* avoid paginating on non pagination pages ([#46](https://github.com/hugomods/base/issues/46)) ([644661f](https://github.com/hugomods/base/commit/644661fe611b5306ec4a9a4a2180bc2cf88adbb9))
+
 ## [0.7.0](https://github.com/hugomods/base/compare/v0.6.0...v0.7.0) (2024-05-28)
 
 
