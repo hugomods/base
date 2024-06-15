@@ -3,7 +3,7 @@
   {{- $titles = slice .Site.Title }}
 {{- end }}
 {{/* Append paginator title. The partial must be included after paginating. */}}
-{{- if not .IsPage }}
+{{- if .Store.Get "paginated" }}
   {{- with .Paginator }}
     {{- if gt .PageNumber 1 }}
       {{- $titles = $titles | append (i18n "paginator_title" .) }}
