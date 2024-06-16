@@ -1,15 +1,11 @@
 {{/* Returns the ancestral sections titles of current page, except home page. */}}
 {{- $titles := slice }}
 {{/* Get parent section of the page. */}}
-{{- $section := cond .IsSection .Parent .CurrentSection }}
-{{- if ne $section . }}
-  {{- with $section }}
-    {{/* Break the loop if home page reached. */}}
-    {{- if not .IsHome }}
-      {{- $titles = $titles | append .Title }}
-      {{/* Dive deeper. */}}
-      {{- $titles = $titles | append (partial "base/functions/sections-titles" .) }}
-    {{- end }}
+{{- range .Ancestors }}
+  {{/* Break the loop if home page reached. */}}
+  {{- if .IsHome }}
+    {{- continue }}
   {{- end }}
+  {{- $titles = $titles | append .Title }}
 {{- end }}
 {{- return $titles }}
