@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/hugomods/base/compare/v0.7.1...v0.7.2) (2024-06-16)
+
+
+### Performance Improvements ⚡️
+
+* use Ancestors for section titles ([8655e18](https://github.com/hugomods/base/commit/8655e1847fe1e68b4b0ad944a8c952fa0122071e))
+
 ## [0.7.1](https://github.com/hugomods/base/compare/v0.7.0...v0.7.1) (2024-06-15)
 
 
