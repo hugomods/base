@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.3](https://github.com/hugomods/base/compare/v0.7.2...v0.7.3) (2025-04-11)
+
+
+### Bug Fixes 🐞
+
+* partial calling ([c986a1f](https://github.com/hugomods/base/commit/c986a1f12c0c19fc91ea4a0450cbc03e75f547d2))
+
 ## [0.7.2](https://github.com/hugomods/base/compare/v0.7.1...v0.7.2) (2024-06-16)
 
 
